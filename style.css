@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.img{
+    overflow-clip-margin: content-box;
+overflow: clip;
+padding-top: -10rem;
+max-width: 100%;
+width: 100%;
+height: 200px;
+
+}
+
+* {
+    margin: 0;
+padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: -300;
+    margin-top: 0;
+    min-height: 100vh;
+    background: #2e4276;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+i {
+    position: absolute;
+    height: 150px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(45deg, #797979, transparent);
+    animation: animat 5s linear infinite;
+}
+
+i:nth-child(3n+1) {
+    background: linear-gradient(45deg, #ececec, transparent);
+}
+
+i:nth-child(3n+2) {
+    background: linear-gradient(45deg, #ffe1c5, transparent);
+}
+
+i:nth-child(3n+3) {
+    background: linear-gradient(45deg, #cbffdf, transparent);
+}
+
+@keyframes animat {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(calc(100vh + 200px));
+    }
+}
+.item{
+
+margin: auto;
+padding: auto;
+text-align: center;
+}
+.container{
+
+position: absolute;
+padding-top: 100px;
+width: 100%;
+}
+
+.waviy {
+-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+
+font-size: 80px;
+margin: auto 25% auto 25%;
+align-items: center;
+
+
+
+}
+.waviy span {
+font-family: 'Alfa Slab One', cursive;
+position: relative;
+display: inline-block;
+color: #fff;
+text-transform: uppercase;
+animation: waviy 1s infinite;
+animation-delay: calc(.1s * var(--i));
+
+
+}
+@keyframes waviy {
+0%,40%,100% {
+transform: translateY(0)
+}
+20% {
+transform: translateY(-20px)
+}
+}
